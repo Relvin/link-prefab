@@ -207,7 +207,7 @@ icon1中存放的是我们引用com-icon.prefab,并且在右上角的层级管�
 
 ![20200403184738](https://github.com/Relvin/link-prefab/blob/master/readme/20200403184738.png)
 
-现在基本上需要实现的功能已经解决了，那我们在代码中如何使用。最好是代码简洁，不影响访问效率。我们添加了一个直接获取节点组件的方法，这样用起来基本上就没差了
+现在基本上需要实现的功能已经解决了，那我们在代码中如何使用? 最好是代码简洁，不影响访问效率。我们添加了一个直接获取节点组件的方法，这样用起来基本上就没差了
 
 ```typescript
 public getPrefabComponect<T extends cc.Component>(type: {prototype: T}): T {
