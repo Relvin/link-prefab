@@ -299,9 +299,7 @@ export default class LinkSpriteHelp extends cc.Component {
 ​	解决办法：在创建前，判断当前节点的children中是否已存在预制体的实例节点。
 
 
-### 注意：
-
-由于官方在2.3.1版本以后，添加了在预制体中引用预制体的警告。没错就是它：
+2、由于官方在2.3.1版本以后，添加了在预制体中引用预制体的警告。没错就是它：
 
 ![image-20200402150854377](https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402150854377.png)
 
