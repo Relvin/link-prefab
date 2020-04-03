@@ -218,11 +218,13 @@ start () {
 }
 ```
 
-
+下面就是最终的实现效果，第一张图是源文件设计有一个com-icon和一个label组成。
 
 ![20200403185043](https://github.com/Relvin/link-prefab/blob/master/readme/20200403185043.png)
 
-下面就是最终的实现效果，icon1中存放的是我们引用com-icon.prefab,并且在右上角的层级管理器里不会显示com-icon中的实现细节。
+下图为引用com-icon的显示效果。
+
+icon1中存放的是我们引用com-icon.prefab,并且在右上角的层级管理器里不会显示com-icon中的实现细节。
 
 ![20200403184738](https://github.com/Relvin/link-prefab/blob/master/readme/20200403184738.png)
 
