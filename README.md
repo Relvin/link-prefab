@@ -1,7 +1,7 @@
 ## 在creator中如何优雅的复用prefab（预制体）
 先演示一下使用的效果，视频演示的内容是，我创建了一个icon的预制，然后在login-layer里添加两个icon，修改com-icon的预制资源，使用的地方同步修改。并且在使用的地方不会暴露预制节点的内部信息。
 
-![](https://github.com/Relvin/link-prefab/tree/master/readme/2020-4-2 12-24-15.gif)
+![](https://github.com/Relvin/link-prefab/blob/master/readme/2020-4-2 12-24-15.gif)
 
 
 
@@ -15,7 +15,7 @@
 
 **道具图标**是游戏内复用性最高的**组件**之一了，**背包**、**成就奖励信息**、**掉落界面**、**道具详情**等等
 
-![15858808566612](https://github.com/Relvin/link-prefab/tree/master/readme/15858808566612.png)![15858808566612](https://github.com/Relvin/link-prefab/tree/master/readme/15858809963833.png)
+![15858808566612](https://github.com/Relvin/link-prefab/blob/master/readme/15858808566612.png)![15858808566612](https://github.com/Relvin/link-prefab/blob/master/readme/15858809963833.png)
 
 **（图片素材来源于网络）**
 
@@ -92,7 +92,7 @@ export default class LinkPrefab extends cc.Component {
 }
 ```
 
-![image-20200402162249956](https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402162249956.png)
+![image-20200402162249956](https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402162249956.png)
 
 从上图可以看到，预制被正常的显示出来了。但是被引用的预制体实例化后，会出现在层级树里（红框框出来的部分），会导致引用它的预制体或场景发生变更。这不是我们所期望的。
 
@@ -126,7 +126,7 @@ _updateLocalMatrix() {
 
 不能用**PrivateNode**，那我们就继续找，找**PrivateNode**与**cc.Node**有啥不同。我们找到了一个属性，经过测试，发现确实是这个属性在起作用。
 
-![image-20200402142308217](https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402142308217.png)
+![image-20200402142308217](https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402142308217.png)
 
 我们深入研究了属性信息：
 
@@ -214,11 +214,11 @@ b:在界面B中增加4个节点，调整好位置，分别挂载LinkPrefab组件
 
 在A的节点上挂载link-sprite-prefab(见下方代码)节点，把需要显示的贴图拖到link-sprite-prefab组件的纹理图属性上。 
 
-![image-20200402164201469](https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402164201469.png)
+![image-20200402164201469](https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402164201469.png)
 
  这里对四个中的三个icon挂在了link-sprite-help,并且设置了不同的纹理，这样我们既保证了统一性，又保证了显示的灵活性。
 
-  <img src="https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402164405217.png" alt="image-20200402164405217" style="zoom:67%;" /><img src="https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402164308923.png" alt="image-20200402164308923" style="zoom:67%;" /><img src="https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402164240106.png" alt="image-20200402164240106" style="zoom:67%;" />
+  <img src="https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402164405217.png" alt="image-20200402164405217" style="zoom:67%;" /><img src="https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402164308923.png" alt="image-20200402164308923" style="zoom:67%;" /><img src="https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402164240106.png" alt="image-20200402164240106" style="zoom:67%;" />
 
 
 
@@ -275,7 +275,7 @@ export default class LinkSpriteHelp extends cc.Component {
 
 由于官方在2.3.1版本以后，添加了在预制体中引用预制体的警告。没错就是它：
 
-![image-20200402150854377](https://github.com/Relvin/link-prefab/tree/master/readme/image-20200402150854377.png)
+![image-20200402150854377](https://github.com/Relvin/link-prefab/blob/master/readme/image-20200402150854377.png)
 
 相信你们大多数人已经遇到了，我们的这个写法是这个警告的主要受害群体，所以我的解决方案是把警告弹框忽略掉。将下面的代码放到项目的启动代码中，就可解决
 
@@ -288,11 +288,11 @@ if (CC_EDITOR && !window["Editor"].isBuilder) {
 }
 ```
 
-以上示例项目的源代码已经上传，大家可以直接下载下来https://github.com/relvin
+以上示例项目的源代码已经上传，大家可以直接下载下来https://github.com/Relvin/link-prefab
 
 
 
-### 不要走开，后面有彩蛋<img src="https://github.com/Relvin/link-prefab/tree/master/readme/GIF 2020-4-3 11-24-59.gif" alt="GIF 2020-4-3 11-24-59" style="zoom:67%;" />
+### 不要走开，后面有彩蛋<img src="https://github.com/Relvin/link-prefab/blob/master/readme/GIF 2020-4-3 11-24-59.gif" alt="GIF 2020-4-3 11-24-59" style="zoom:67%;" />
 
 
 
