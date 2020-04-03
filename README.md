@@ -1,7 +1,7 @@
 ## 在creator中如何优雅的复用prefab（预制体）
 先演示一下使用的效果，视频演示的内容是，我创建了一个icon的预制，然后在login-layer里添加两个icon，修改com-icon的预制资源，使用的地方同步修改。并且在使用的地方不会暴露预制节点的内部信息。
 
-![](https://github.com/Relvin/link-prefab/blob/master/readme/2020-4-2 12-24-15.gif)
+![2020-4-2-12-24-15](https://github.com/Relvin/link-prefab/blob/master/readme/2020-4-2-12-24-15.gif)
 
 
 
@@ -292,7 +292,7 @@ if (CC_EDITOR && !window["Editor"].isBuilder) {
 
 
 
-### 不要走开，后面有彩蛋<img src="https://github.com/Relvin/link-prefab/blob/master/readme/GIF 2020-4-3 11-24-59.gif" alt="GIF 2020-4-3 11-24-59" style="zoom:67%;" />
+### 不要走开，后面有彩蛋<img src="https://github.com/Relvin/link-prefab/blob/master/readme/GIF 2020-4-3 11-24-59.gif" alt="GIF-2020-4-3-11-24-59" style="zoom:67%;" />
 
 
 
