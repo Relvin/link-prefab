@@ -220,6 +220,12 @@ start () {
 
 
 
+![20200403185043](https://github.com/Relvin/link-prefab/blob/master/readme/20200403185043.png)
+
+下面就是最终的实现效果，icon1中存放的是我们引用com-icon.prefab,并且在右上角的层级管理器里不会显示com-icon中的实现细节。
+
+![20200403184738](https://github.com/Relvin/link-prefab/blob/master/readme/20200403184738.png)
+
 ### 二、更上一层楼
 
 虽然我们实现了预制体在其他预制体中复用，但是目前来开还是比较简单，不够灵活，不能在编辑器里动态改变一些我们需要改变的信息。
