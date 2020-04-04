@@ -1,3 +1,8 @@
+/*********************************
+ * 创建者   ：Relvin
+ * 时间     ：2020年3月11号16:52:10
+ * 
+ * ******************************/
 
 const {ccclass, executeInEditMode, property} = cc._decorator;
 
