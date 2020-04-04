@@ -1,4 +1,4 @@
-## 在creator中如何优雅的复用prefab（预制体）
+## 在Cocos Creator中如何优雅的复用prefab（预制体）
 
 ## 前言
 
